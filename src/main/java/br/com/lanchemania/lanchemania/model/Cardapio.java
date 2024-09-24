@@ -11,7 +11,7 @@ import org.hibernate.annotations.SQLRestriction;
 
 @Entity
 @Table(name = "tb_cardapio")
-@SQLDelete(sql = "UPDATE tb_cardapio SET ativo = true WHERE id = ?")
+@SQLDelete(sql = "UPDATE tb_cardapio SET ativo = false WHERE id = ?")
 @SQLRestriction("ativo = true")
 @Getter @Setter
 @AllArgsConstructor
