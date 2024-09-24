@@ -25,4 +25,13 @@ public enum Categoria {
     public String getDescricao() {
         return descricao;
     }
+
+    public static Categoria fromDescricao(String descricao) {
+        for (Categoria categoria : Categoria.values()) {
+            if (categoria.getDescricao().equals(descricao)) {
+                return categoria;
+            }
+        }
+        return null;
+    }
 }

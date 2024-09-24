@@ -23,7 +23,7 @@ public class Cardapio extends ModeloGenerico{
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "cardapio_sequence")
     private Long id;
 
-    @Column(name = "nome", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "nome", nullable = false)
     private String nome;
 
     @Column(name = "descricao", nullable = false, columnDefinition = "TEXT")
@@ -32,7 +32,7 @@ public class Cardapio extends ModeloGenerico{
     @Column(name = "imagem", nullable = false, columnDefinition = "TEXT")
     private String imagem;
 
-    @Column(name = "categoria", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "categoria", nullable = false)
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
 
