@@ -18,7 +18,7 @@ public abstract class ModeloGenerico {
     @Column(name = "ativo", nullable = false)
     private boolean ativo;
 
-    public ModeloGenerico() {
+    protected ModeloGenerico() {
         this.dataAtualizacao = LocalDateTime.now();
         this.ativo = true;
     }
