@@ -1,4 +1,4 @@
-package br.com.lanchemania.lanchemania.util;
+package br.com.lanchemania.lanchemania.util.enumerate;
 
 public enum Categoria {
 

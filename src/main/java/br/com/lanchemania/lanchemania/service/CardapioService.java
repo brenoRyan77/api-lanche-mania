@@ -3,7 +3,7 @@ package br.com.lanchemania.lanchemania.service;
 import br.com.lanchemania.lanchemania.mapper.CardapioMapper;
 import br.com.lanchemania.lanchemania.model.Cardapio;
 import br.com.lanchemania.lanchemania.repository.CardapioRepository;
-import br.com.lanchemania.lanchemania.util.Categoria;
+import br.com.lanchemania.lanchemania.util.enumerate.Categoria;
 import br.com.lanchemania.lanchemania.vo.CardapioVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

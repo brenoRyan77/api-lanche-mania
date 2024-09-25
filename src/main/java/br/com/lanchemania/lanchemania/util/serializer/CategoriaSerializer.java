@@ -1,6 +1,6 @@
 package br.com.lanchemania.lanchemania.util.serializer;
 
-import br.com.lanchemania.lanchemania.util.Categoria;
+import br.com.lanchemania.lanchemania.util.enumerate.Categoria;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;

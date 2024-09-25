@@ -2,7 +2,7 @@ package br.com.lanchemania.lanchemania.repository.impl;
 
 import br.com.lanchemania.lanchemania.model.Cardapio;
 import br.com.lanchemania.lanchemania.repository.custom.CardapioRepositoryCustom;
-import br.com.lanchemania.lanchemania.util.Categoria;
+import br.com.lanchemania.lanchemania.util.enumerate.Categoria;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;

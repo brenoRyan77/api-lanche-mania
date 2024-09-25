@@ -1,6 +1,6 @@
 package br.com.lanchemania.lanchemania.model;
 
-import br.com.lanchemania.lanchemania.util.Categoria;
+import br.com.lanchemania.lanchemania.util.enumerate.Categoria;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,6 +1,6 @@
 package br.com.lanchemania.lanchemania.vo;
 
-import br.com.lanchemania.lanchemania.util.Categoria;
+import br.com.lanchemania.lanchemania.util.enumerate.Categoria;
 import br.com.lanchemania.lanchemania.util.deserializer.CategoriaDeserializer;
 import br.com.lanchemania.lanchemania.util.serializer.CategoriaSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
