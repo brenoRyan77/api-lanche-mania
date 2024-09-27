@@ -23,17 +23,20 @@ public class ItemPedido extends ModeloGenerico {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "item_pedido_sequence")
     private Long id;
 
+    @Column(name = "observacao", columnDefinition = "TEXT")
+    private String observacao;
+
     @ManyToOne
     @JoinColumn(name = "pedido_id", nullable = false, foreignKey = @ForeignKey(name = "fk_item_pedido_pedido"))
     private Pedido pedido;
-
-    @ManyToOne
-    @JoinColumn(name = "cardapio_id", nullable = false, foreignKey = @ForeignKey(name = "fk_item_pedido_cardapio"))
-    private Cardapio cardapio;
 
     @Column(name = "quantidade", nullable = false)
     private Integer quantidade;
 
     @Column(name = "subtotal", nullable = false)
     private Double subtotal;
+
+    @ManyToOne
+    @JoinColumn(name = "cardapio_id", nullable = false, foreignKey = @ForeignKey(name = "fk_item_pedido_cardapio"))
+    private Cardapio cardapio;
 }

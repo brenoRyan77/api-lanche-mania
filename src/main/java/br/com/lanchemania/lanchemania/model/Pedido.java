@@ -27,8 +27,8 @@ public class Pedido extends ModeloGenerico {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "pedido_sequence")
     private Long id;
 
-    @Column(name = "observacao", columnDefinition = "TEXT")
-    private String obersevacao;
+    @Column(name = "numero_pedido", nullable = false, unique = true)
+    private Long numeroPedido;
 
     @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = false, foreignKey = @ForeignKey(name = "fk_pedido_cliente"))
@@ -43,4 +43,9 @@ public class Pedido extends ModeloGenerico {
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private StatusPedido status;
+
+    @PrePersist
+    private void prePersist(){
+        this.status = StatusPedido.RECEBIDO;
+    }
 }
