@@ -32,6 +32,9 @@ public class Endereco extends ModeloGenerico {
     @Column(name = "estado", nullable = false, length = 2)
     private String estado;
 
+    @Column(name = "bairro", nullable = false)
+    private String bairro;
+
     @Column(name = "cep", nullable = false, length = 8)
     private String cep;
 

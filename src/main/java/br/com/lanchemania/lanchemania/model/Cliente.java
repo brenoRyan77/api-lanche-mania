@@ -27,7 +27,6 @@ public class Cliente extends ModeloGenerico{
     @Column(name = "nome", nullable = false)
     private String nome;
 
-    @Email
     @Column(name = "numero", nullable = false, unique = true, length = 11)
     private String numero;
 

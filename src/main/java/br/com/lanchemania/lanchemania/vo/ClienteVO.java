@@ -12,7 +12,7 @@ public class ClienteVO {
 
 
     @Data
-    static class EnderecoVO {
+    public static class EnderecoVO {
         private Long id;
         private String logradouro;
         private String numero;
