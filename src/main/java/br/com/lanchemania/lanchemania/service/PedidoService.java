@@ -31,7 +31,7 @@ public class PedidoService {
     private EntityManager entityManager;
 
     @Transactional
-    public void incluir(PedidoVO pedidoVO) {
+    public void finalizarPedido(PedidoVO pedidoVO) {
         Pedido novoPedido = pedidoMapper.mapToEntity(pedidoVO);
         novoPedido.setStatus(StatusPedido.RECEBIDO);
         novoPedido.setNumeroPedido(gerarNumeroPedido());

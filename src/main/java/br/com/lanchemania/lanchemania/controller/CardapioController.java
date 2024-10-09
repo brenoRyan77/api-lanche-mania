@@ -17,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cardapio")
+@CrossOrigin("*")
 public class CardapioController {
 
     @Autowired
@@ -38,22 +39,14 @@ public class CardapioController {
     }
 
     @GetMapping
-    public Page<CardapioVO> listarPaginado(@RequestParam(required = false) String nome,
-                                           @RequestParam(required = false) Categoria categoria,
-                                           @RequestParam(defaultValue = "0") int page,
-                                           @RequestParam(defaultValue = "10") int size) {
-        Pageable pageable = PageRequest.of(page, size);
-
-        Page<Cardapio> cardapios = cardapioService.listarPaginado(nome, categoria, pageable);
-        return cardapios.map(cardapioMapper::mapToVO);
+    public List<CardapioVO> listar() {
+        List<Cardapio> cardapios = cardapioService.listarPaginado();
+        return cardapios.stream().map(cardapioMapper::mapToVO).toList();
     }
 
     @GetMapping("/categoria/{categoria}")
-    public List<CardapioVO> listarPorCategoria(@PathVariable("categoria") Categoria categoria,
-                                              @RequestParam(defaultValue = "0") int page,
-                                              @RequestParam(defaultValue = "10") int size){
-        Pageable pageable = PageRequest.of(page, size);
-        return cardapioService.listarPorCategoria(categoria, pageable).stream().map(cardapioMapper::mapToVO).toList();
+    public List<CardapioVO> listarPorCategoria(@PathVariable("categoria") Categoria categoria){
+        return cardapioService.listarPorCategoria(categoria).stream().map(cardapioMapper::mapToVO).toList();
     }
 
     @GetMapping("/{id}")

@@ -9,7 +9,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface CardapioRepository extends JpaRepository<Cardapio, Long>, CardapioRepositoryCustom {
-    Page<Cardapio> findByCategoria(@Param("categoria") Categoria categoria, Pageable pageable);
+    List<Cardapio> findByCategoria(@Param("categoria") Categoria categoria);
 }

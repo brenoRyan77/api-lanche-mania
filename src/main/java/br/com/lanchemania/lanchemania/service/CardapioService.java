@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -34,12 +35,12 @@ public class CardapioService {
         cardapioRepository.save(cardapio);
     }
 
-    public Page<Cardapio> listarPaginado(String nome, Categoria categoria, Pageable pageable) {
-        return cardapioRepository.listarPaginado(nome, categoria, pageable);
+    public List<Cardapio> listarPaginado() {
+        return cardapioRepository.findAll();
     }
 
-    public Page<Cardapio> listarPorCategoria(Categoria categoria, Pageable pageable) {
-        return cardapioRepository.findByCategoria(categoria, pageable);
+    public List<Cardapio> listarPorCategoria(Categoria categoria) {
+        return cardapioRepository.findByCategoria(categoria);
     }
 
     @Transactional

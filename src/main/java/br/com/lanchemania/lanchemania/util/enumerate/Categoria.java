@@ -14,7 +14,12 @@ public enum Categoria {
     PIZZAS("Pizzas"),
     PORCOS("Porcos"),
     SANDUICHES("Sanduíches"),
-    BIFES("Bifes");
+    BIFES("Bifes"),
+    PEIXADA("Peixada"),
+    ARRUMADINHO("Arrumadinho"),
+    PARMEGIANA("Parmegiana"),
+    PETISCOS("Petiscos"),
+    ALMOCO("Almoço");
 
     private final String descricao;
 

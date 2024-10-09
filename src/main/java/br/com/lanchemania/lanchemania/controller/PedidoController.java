@@ -20,7 +20,7 @@ public class PedidoController {
 
     @PostMapping
     public ResponseEntity<Void> incluir(@RequestBody PedidoVO vo){
-        pedidoService.incluir(vo);
+        pedidoService.finalizarPedido(vo);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
