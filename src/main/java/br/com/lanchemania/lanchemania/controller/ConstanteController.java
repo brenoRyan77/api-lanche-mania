@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 @RestController
@@ -24,6 +25,6 @@ public class ConstanteController {
                     vo.setLabel(categoria.getDescricao());
                     return vo;
                 })
-                .sorted((cat1, cat2) -> cat1.getLabel().compareTo(cat2.getLabel())).toList();
+                .sorted(Comparator.comparing(CategoriaVO::getLabel)).toList();
     }
 }
